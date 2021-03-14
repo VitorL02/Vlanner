@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 
+main() => runApp(Vlanner());
+
 class Vlanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: MyHomePage());
+    return MaterialApp(
+      title: 'Vlanner Planeje e se Organize',
+      home: MyHomePage(),
+    );
   }
 }
 

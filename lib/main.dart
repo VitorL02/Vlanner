@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/homeScreen.dart';
 import 'package:flutter/services.dart';
+import 'screens/CostsScreen.dart';
 
 main() => runApp(Vlanner());
 
@@ -26,6 +27,7 @@ class Vlanner extends StatelessWidget {
       ))),
       title: 'Vlanner Planeje e se Organize',
       home: ScreenHome(),
+      routes: {'/costs': (ctx) => CostsScreen()},
     );
   }
 }

@@ -3,7 +3,7 @@ import '../models/screenInformationsClass.dart';
 const ScreenData = const [
   ScreenInformation(
     id: 1,
-    title: 'ControleDespesas',
+    title: 'Controle de Despesas',
   ),
   ScreenInformation(
     id: 2,

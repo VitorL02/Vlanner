@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/homeScreen.dart';
 
 main() => runApp(Vlanner());
 
@@ -7,17 +8,7 @@ class Vlanner extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Vlanner Planeje e se Organize',
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Vlanner')),
-      body: Center(child: Text('Inicio')),
+      home: ScreenHome(),
     );
   }
 }

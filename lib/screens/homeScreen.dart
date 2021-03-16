@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 import 'CostsScreen.dart';
 
-void _goScreen(BuildContext context) {
-  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => CostsScreen()),
-  );
-}
-
 class ScreenHome extends StatefulWidget {
   @override
   _ScreenHomeState createState() => _ScreenHomeState();
@@ -20,7 +13,15 @@ class _ScreenHomeState extends State<ScreenHome> {
   void _barItemSelect(int index) {
     setState(() {
       _indexSelect = index;
+      print(_indexSelect);
     });
+  }
+
+  void _goScreen(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => CostsScreen()),
+    );
   }
 
   Widget build(BuildContext context) {
@@ -37,12 +38,40 @@ class _ScreenHomeState extends State<ScreenHome> {
           ),
         ),
         body: Column(children: [
-          Container(
-            margin: EdgeInsets.all(30),
-            height: 170,
-            width: double.infinity,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), color: Colors.white),
+          Column(
+            children: [
+              Container(
+                  margin: EdgeInsets.all(20),
+                  height: 170,
+                  width: double.infinity,
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Text(
+                          'Bem vindo',
+                          textAlign: TextAlign.center,
+                          // ignore: deprecated_member_use
+                          style: Theme.of(context).textTheme.title,
+                        ),
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Card(
+                            elevation: 5,
+                            margin: EdgeInsets.all(10),
+                            child: Container(
+                              child: Text('nome '),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                  )),
+            ],
           ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,

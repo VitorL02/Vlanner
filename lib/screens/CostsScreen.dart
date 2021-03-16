@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:vlanner/models/screenInformationsClass.dart';
-import '../data/ScreensData.dart';
 
 class CostsScreen extends StatelessWidget {
   @override

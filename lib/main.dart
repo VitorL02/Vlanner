@@ -19,12 +19,18 @@ class Vlanner extends StatelessWidget {
     return MaterialApp(
       color: Colors.brown[200],
       theme: ThemeData(
+          appBarTheme: AppBarTheme(
+              backgroundColor: Colors.brown[600],
+              titleTextStyle: TextStyle(
+                fontFamily: 'Raleway',
+                fontWeight: FontWeight.bold,
+              )),
           textTheme: TextTheme(
+              // ignore: deprecated_member_use
               title: TextStyle(
-        fontFamily: 'Nunito',
-        fontSize: 20,
-        color: Colors.indigo[600],
-      ))),
+            fontFamily: 'Nunito',
+            fontSize: 20,
+          ))),
       title: 'Vlanner Planeje e se Organize',
       home: ScreenHome(),
       routes: {'/costs': (ctx) => CostsScreen()},

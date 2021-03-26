@@ -26,11 +26,15 @@ class Vlanner extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               )),
           textTheme: TextTheme(
+              subtitle: TextStyle(
+                  fontFamily: 'Raleway',
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold),
               // ignore: deprecated_member_use
               title: TextStyle(
-            fontFamily: 'Nunito',
-            fontSize: 20,
-          ))),
+                fontFamily: 'Nunito',
+                fontSize: 20,
+              ))),
       title: 'Vlanner Planeje e se Organize',
       home: ScreenHome(),
       routes: {'/costs': (ctx) => CostsScreen()},

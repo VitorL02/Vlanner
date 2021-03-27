@@ -32,18 +32,20 @@ class _ScreenHomeState extends State<ScreenHome> {
     if (index == 2) {
       _goCostScreen(context);
     }
+    // ignore: empty_statements
     ;
     if (index == 1) {
       _goPlannerScreen(context);
     }
+    // ignore: empty_statements
     ;
   }
 
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.brown[200].withOpacity(0.8),
+        backgroundColor: Colors.brown[50].withOpacity(1),
         appBar: AppBar(
-          backgroundColor: Colors.brown[600],
+          backgroundColor: Colors.brown[300],
           title: Text(
             'Vlanner',
             style: TextStyle(
@@ -52,114 +54,136 @@ class _ScreenHomeState extends State<ScreenHome> {
             ),
           ),
         ),
-        body: Column(children: [
-          Column(
-            children: [
-              Container(
-                  margin: EdgeInsets.all(15),
-                  height: 170,
-                  width: double.infinity,
-                  child: Column(
-                    children: [
-                      Container(
-                        child: Text(
-                          'Bem vindo',
-                          textAlign: TextAlign.center,
-                          // ignore: deprecated_member_use
-                          style: Theme.of(context).textTheme.title,
+        body: SingleChildScrollView(
+          child: Column(children: [
+            Column(
+              children: <Widget>[
+                Container(
+                    height: 200,
+                    width: double.infinity,
+                    child: Column(
+                      children: [
+                        Container(
+                          child: Text(
+                            'Bem vindo',
+                            textAlign: TextAlign.center,
+                            // ignore: deprecated_member_use
+                            style: Theme.of(context).textTheme.title,
+                          ),
                         ),
-                      ),
-                      CircleAvatar(
-                        backgroundColor: Colors.brown.shade800,
-                        child: Text('AH'),
-                      ),
-                      Align(
-                        alignment: Alignment(0.60, -0.80),
-                        child: Container(
-                          child: Card(
-                            elevation: 5,
-                            margin: EdgeInsets.all(10),
+                        CircleAvatar(
+                          backgroundColor: Colors.brown.shade800,
+                          child: Text('AH'),
+                        ),
+                        Align(
+                          alignment: Alignment(0.60, -0.80),
+                          child: Container(
                             child: Column(
                               children: [
                                 Text('Nome ',
+                                    // ignore: deprecated_member_use
                                     style:
                                         Theme.of(context).textTheme.subtitle),
+                                // ignore: deprecated_member_use
                                 Text('Tarefas Restante: ',
+                                    // ignore: deprecated_member_use
                                     style:
                                         Theme.of(context).textTheme.subtitle),
                                 Text('Dinheiro Restante: ',
+                                    // ignore: deprecated_member_use
                                     style:
                                         Theme.of(context).textTheme.subtitle),
                               ],
                             ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
-                  )),
-            ],
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Container(
-                margin: EdgeInsets.all(30),
-                height: 160,
-                width: 120,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.blue[100].withOpacity(0.8),
-                        Colors.blue[400]
                       ],
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                    )),
-                // ignore: deprecated_member_use
-                child: FlatButton(
-                  onPressed: () => _goCostScreen(context),
-                  child: Text(
-                    'Controle de despesas',
-                    textAlign: TextAlign.center,
-                    // ignore: deprecated_member_use
-                    style: Theme.of(context).textTheme.title,
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(30),
-                height: 160,
-                width: 120,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.deepPurple[400].withOpacity(0.8),
-                        Colors.purple[700]
+                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.vertical(
+                          bottom: Radius.circular(25),
+                        ),
+                        gradient: LinearGradient(
+                          colors: [
+                            Colors.brown[300].withOpacity(1),
+                            Colors.brown[300]
+                          ],
+                        ))),
+              ],
+            ),
+            Column(
+              children: <Widget>[
+                Container(
+                    height: 200,
+                    child: Column(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4),
+                          child: Row(
+                            children: [
+                              Container(
+                                alignment: Alignment(-0.9, -0.9),
+                                child: Text('Se organize!',
+                                    style: TextStyle(
+                                        fontFamily: 'PressStart2P-Regular',
+                                        fontSize: 20,
+                                        color: Colors.black87)),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(left: 65),
+                                child: SizedBox(
+                                  width: 40,
+                                  height: 40,
+                                  child: FloatingActionButton(
+                                      backgroundColor:
+                                          Colors.red.withOpacity(0.8),
+                                      child: Icon(Icons.calendar_today),
+                                      onPressed: () =>
+                                          _goPlannerScreen(context)),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
                     )),
-                // ignore: deprecated_member_use
-                child: FlatButton(
-                  onPressed: () => _goPlannerScreen(context),
-                  child: Text(
-                    'Planner',
-                    textAlign: TextAlign.center,
-                    // ignore: deprecated_member_use
-                    style: Theme.of(context).textTheme.title,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ]),
+                Container(
+                    height: 200,
+                    child: Column(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4),
+                          child: Row(
+                            children: [
+                              Container(
+                                alignment: Alignment(-0.9, -0.9),
+                                child: Text('Suas Finanças!',
+                                    style: TextStyle(
+                                        fontFamily: 'PressStart2P-Regular',
+                                        fontSize: 20,
+                                        color: Colors.black87)),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(left: 23),
+                                child: SizedBox(
+                                  width: 40,
+                                  height: 40,
+                                  child: FloatingActionButton(
+                                      backgroundColor:
+                                          Colors.green[400].withOpacity(0.8),
+                                      child: Icon(Icons.attach_money_outlined),
+                                      onPressed: () => _goCostScreen(context)),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    )),
+              ],
+            )
+          ]),
+        ),
         //Barra de opções
         bottomNavigationBar: BottomNavigationBar(
           //BottomaNavigationBarr.Shifting faz a bar mostrar somente o icone,quando o usuario faz o tap, a label e mostrada

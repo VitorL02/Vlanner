@@ -26,6 +26,7 @@ class Vlanner extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               )),
           textTheme: TextTheme(
+              // ignore: deprecated_member_use
               subtitle: TextStyle(
                   fontFamily: 'Raleway',
                   fontSize: 17,

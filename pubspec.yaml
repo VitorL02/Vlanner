@@ -77,6 +77,10 @@ flutter:
         - asset: assets\fonts\Nunito-Italic.ttf
         - asset: assets\fonts\Nunito-Regular.ttf
           weight: 700
+    - family: PressStart2P-Regular
+      fonts:
+        - asset: assets\fonts\PressStart2P-Regular.ttf
+          weight: 700      
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

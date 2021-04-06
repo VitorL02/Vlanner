@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'CostsScreen.dart';
 import 'PlannerScreen.dart';
+import '../components/informationPendences.dart';
 
 class ScreenHome extends StatefulWidget {
   @override
@@ -59,7 +60,7 @@ class _ScreenHomeState extends State<ScreenHome> {
             Column(
               children: <Widget>[
                 Container(
-                    height: 200,
+                    height: 160,
                     width: double.infinity,
                     child: Column(
                       children: [
@@ -71,31 +72,37 @@ class _ScreenHomeState extends State<ScreenHome> {
                             style: Theme.of(context).textTheme.title,
                           ),
                         ),
-                        CircleAvatar(
-                          backgroundColor: Colors.brown.shade800,
-                          child: Text('AH'),
-                        ),
-                        Align(
-                          alignment: Alignment(0.60, -0.80),
-                          child: Container(
-                            child: Column(
-                              children: [
-                                Text('Nome ',
-                                    // ignore: deprecated_member_use
-                                    style:
-                                        Theme.of(context).textTheme.subtitle),
-                                // ignore: deprecated_member_use
-                                Text('Tarefas Restante: ',
-                                    // ignore: deprecated_member_use
-                                    style:
-                                        Theme.of(context).textTheme.subtitle),
-                                Text('Dinheiro Restante: ',
-                                    // ignore: deprecated_member_use
-                                    style:
-                                        Theme.of(context).textTheme.subtitle),
-                              ],
+                        Padding(
+                          padding: const EdgeInsets.only(left: 40.0),
+                          child: Row(children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 20, vertical: 30),
+                              child: CircleAvatar(
+                                radius: 34,
+                                backgroundColor: Colors.white,
+                              ),
                             ),
-                          ),
+                            Container(
+                              child: Column(
+                                children: [
+                                  Text('Nome ',
+                                      // ignore: deprecated_member_use
+                                      style:
+                                          Theme.of(context).textTheme.subtitle),
+                                  // ignore: deprecated_member_use
+                                  Text('Tarefas Restante: ',
+                                      // ignore: deprecated_member_use
+                                      style:
+                                          Theme.of(context).textTheme.subtitle),
+                                  Text('Dinheiro Restante: ',
+                                      // ignore: deprecated_member_use
+                                      style:
+                                          Theme.of(context).textTheme.subtitle),
+                                ],
+                              ),
+                            ),
+                          ]),
                         ),
                       ],
                     ),
@@ -123,14 +130,18 @@ class _ScreenHomeState extends State<ScreenHome> {
                             children: [
                               Container(
                                 alignment: Alignment(-0.9, -0.9),
-                                child: Text('Se organize!',
-                                    style: TextStyle(
-                                        fontFamily: 'PressStart2P-Regular',
-                                        fontSize: 20,
-                                        color: Colors.black87)),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text('Se organize!',
+                                      style: TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontSize: 26,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black87)),
+                                ),
                               ),
                               Container(
-                                padding: EdgeInsets.only(left: 65),
+                                padding: EdgeInsets.only(left: 150),
                                 child: SizedBox(
                                   width: 40,
                                   height: 40,
@@ -145,10 +156,13 @@ class _ScreenHomeState extends State<ScreenHome> {
                             ],
                           ),
                         ),
+                        InformationPendences(),
+                        InformationPendences(),
+                        InformationPendences(),
                       ],
                     )),
                 Container(
-                    height: 200,
+                    height: 300,
                     child: Column(
                       children: <Widget>[
                         Padding(
@@ -157,14 +171,18 @@ class _ScreenHomeState extends State<ScreenHome> {
                             children: [
                               Container(
                                 alignment: Alignment(-0.9, -0.9),
-                                child: Text('Suas Finanças!',
-                                    style: TextStyle(
-                                        fontFamily: 'PressStart2P-Regular',
-                                        fontSize: 20,
-                                        color: Colors.black87)),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text('Suas Finanças!',
+                                      style: TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontSize: 26,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black87)),
+                                ),
                               ),
                               Container(
-                                padding: EdgeInsets.only(left: 23),
+                                padding: EdgeInsets.only(left: 120),
                                 child: SizedBox(
                                   width: 40,
                                   height: 40,
@@ -178,6 +196,9 @@ class _ScreenHomeState extends State<ScreenHome> {
                             ],
                           ),
                         ),
+                        InformationPendences(),
+                        InformationPendences(),
+                        InformationPendences(),
                       ],
                     )),
               ],

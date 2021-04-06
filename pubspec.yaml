@@ -72,6 +72,10 @@ flutter:
         - asset: assets\fonts\Raleway-Italic.ttf
         - asset: assets\fonts\Raleway-Regular.ttf
           weight: 700
+    - family: Cairo
+      fonts:
+        - asset: assets\fonts\Cairo-Regular.ttf
+          weight: 700      
     - family: Nunito
       fonts:
         - asset: assets\fonts\Nunito-Italic.ttf

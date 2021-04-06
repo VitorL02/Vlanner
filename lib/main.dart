@@ -37,8 +37,11 @@ class Vlanner extends StatelessWidget {
                 fontSize: 20,
               ))),
       title: 'Vlanner Planeje e se Organize',
-      home: ScreenHome(),
-      routes: {'/costs': (ctx) => CostsScreen()},
+      home: HomeScreen(),
+      routes: {
+        // '/': (ctx) => HomeScreen(),
+        '/costs': (ctx) => CostsScreen(),
+      },
     );
   }
 }

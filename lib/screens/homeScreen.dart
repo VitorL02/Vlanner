@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'CostsScreen.dart';
 import 'PlannerScreen.dart';
-<<<<<<< HEAD
 import '../components/bodyHomeScreen.dart';
-=======
-import '../components/centralBoxInformation.dart';
->>>>>>> 5abdb45c5def52b365db1ba53d367a6206ebe5fc
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -50,28 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.brown[50],
-<<<<<<< HEAD
       appBar: buildAppBar(),
       body: BodyHomeScreen(),
-=======
-      appBar: AppBar(
-        backgroundColor: Colors.brown[300],
-        title: Text(
-          'Vlanner',
-          style: TextStyle(
-            fontFamily: 'Raleway',
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            CentralBoxInformation(),
-          ],
-        ),
-      ),
->>>>>>> 5abdb45c5def52b365db1ba53d367a6206ebe5fc
       //Barra de opções
       bottomNavigationBar: BottomNavigationBar(
         //BottomaNavigationBarr.Shifting faz a bar mostrar somente o icone,quando o usuario faz o tap, a label e mostrada
@@ -103,7 +79,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-<<<<<<< HEAD
 
 AppBar buildAppBar() {
   return AppBar(
@@ -120,5 +95,3 @@ AppBar buildAppBar() {
     ),
   );
 }
-=======
->>>>>>> 5abdb45c5def52b365db1ba53d367a6206ebe5fc

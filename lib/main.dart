@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/homeScreen.dart';
 import 'package:flutter/services.dart';
 import 'screens/CostsScreen.dart';
+import 'screens/Initialpage.dart';
 
 main() => runApp(Vlanner());
 

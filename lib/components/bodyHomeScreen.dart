@@ -32,19 +32,26 @@ class BodyHomeScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
                     ),
-                    Spacer(),
+                    // Spacer(),
                   ],
                 ),
               ),
-              Center(
-                child: Text(
-                  'Economias Restantes',
-                  style: TextStyle(
-                      color: Colors.white, fontFamily: 'Nunito', fontSize: 19),
+              Positioned(
+                bottom: 65,
+                right: 0,
+                left: 0,
+                child: Center(
+                  child: Text(
+                    'Economias Restantes',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Nunito',
+                        fontSize: 19),
+                  ),
                 ),
               ),
               Positioned(
-                bottom: 0,
+                bottom: 10,
                 right: 0,
                 left: 0,
                 child: Container(

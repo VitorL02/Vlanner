@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:vlanner/components/AppImages.dart';
 
 class InitialPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
-            child: Center(
-      child: Image(
-        image: AssetImage('assets/icon/icon.png'),
-      ),
-    )));
+    return Scaffold(body: Center(child: Image.asset(AppImages.logo)));
   }
 }
